@@ -23,8 +23,8 @@ YiiAsset::register($this);
 			'class' => 'btn btn-danger',
 			'data' => [
 				'confirm' => 'Are you sure you want to delete this item?',
-				'method' => 'post',
-			],
+				'method' => 'post'
+			]
 		]) ?>
 	</p>
 
@@ -35,8 +35,8 @@ YiiAsset::register($this);
 			'name',
 			'create_time',
 			'type_id',
-			'deleted',
-		],
+			'deleted'
+		]
 	]) ?>
 
 </div>

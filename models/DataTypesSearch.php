@@ -16,7 +16,7 @@ class DataTypesSearch extends DataTypes {
 	public function rules() {
 		return [
 			[['id', 'deleted'], 'integer'],
-			[['value'], 'safe'],
+			[['value'], 'safe']
 		];
 	}
 
@@ -41,7 +41,7 @@ class DataTypesSearch extends DataTypes {
 		// add conditions that should always apply here
 
 		$dataProvider = new ActiveDataProvider([
-			'query' => $query,
+			'query' => $query
 		]);
 
 		$this->load($params);
@@ -55,7 +55,7 @@ class DataTypesSearch extends DataTypes {
 		// grid filtering conditions
 		$query->andFilterWhere([
 			'id' => $this->id,
-			'deleted' => $this->deleted,
+			'deleted' => $this->deleted
 		]);
 
 		$query->andFilterWhere(['like', 'value', $this->value]);

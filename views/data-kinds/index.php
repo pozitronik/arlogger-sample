@@ -34,9 +34,9 @@ $this->params['breadcrumbs'][] = $this->title;
 			'main:boolean',
 			'deleted:boolean',
 
-			['class' => ActionColumn::class],
-		],
-	]); ?>
+			['class' => ActionColumn::class]
+		]
+	]) ?>
 
 
 </div>

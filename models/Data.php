@@ -51,7 +51,7 @@ class Data extends ActiveRecord {
 			'create_time' => 'Creation time',
 			'type_id' => 'Item type',
 			'dataKinds' => 'Item kinds',
-			'deleted' => 'Deleted',
+			'deleted' => 'Deleted'
 		];
 	}
 

@@ -34,22 +34,22 @@ AppAsset::register($this);
 			'brandLabel' => 'ActiveRecord Logger test app',
 			'brandUrl' => '/data/index',
 			'options' => [
-				'class' => 'navbar-inverse navbar-fixed-top',
-			],
+				'class' => 'navbar-inverse navbar-fixed-top'
+			]
 		]); ?>
 		<?= Nav::widget([
 			'options' => ['class' => 'navbar-nav navbar-right'],
 			'items' => [
 				['label' => 'Data items', 'url' => ['/data/index']],
 				['label' => 'Item types', 'url' => ['/data-types/index']],
-				['label' => 'Item kinds', 'url' => ['/data-kinds/index']],
-			],
-		]); ?>
+				['label' => 'Item kinds', 'url' => ['/data-kinds/index']]
+			]
+		]) ?>
 		<?php NavBar::end(); ?>
 
 		<div class="container">
 			<?= Breadcrumbs::widget([
-				'links' => $this->params['breadcrumbs']??[],
+				'links' => $this->params['breadcrumbs']??[]
 			]) ?>
 			<?= Alert::widget() ?>
 			<?= $content ?>

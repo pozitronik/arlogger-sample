@@ -16,7 +16,7 @@ class DataSearch extends Data {
 	public function rules() {
 		return [
 			[['id', 'type_id', 'deleted'], 'integer'],
-			[['name', 'create_time'], 'safe'],
+			[['name', 'create_time'], 'safe']
 		];
 	}
 
@@ -41,7 +41,7 @@ class DataSearch extends Data {
 		// add conditions that should always apply here
 
 		$dataProvider = new ActiveDataProvider([
-			'query' => $query,
+			'query' => $query
 		]);
 
 		$this->load($params);
@@ -57,7 +57,7 @@ class DataSearch extends Data {
 			'id' => $this->id,
 			'create_time' => $this->create_time,
 			'type_id' => $this->type_id,
-			'deleted' => $this->deleted,
+			'deleted' => $this->deleted
 		]);
 
 		$query->andFilterWhere(['like', 'name', $this->name]);

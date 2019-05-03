@@ -22,9 +22,9 @@ class DataController extends Controller {
 			'verbs' => [
 				'class' => VerbFilter::class,
 				'actions' => [
-					'delete' => ['POST'],
-				],
-			],
+					'delete' => ['POST']
+				]
+			]
 		];
 	}
 
@@ -38,7 +38,7 @@ class DataController extends Controller {
 
 		return $this->render('index', [
 			'searchModel' => $searchModel,
-			'dataProvider' => $dataProvider,
+			'dataProvider' => $dataProvider
 		]);
 	}
 
@@ -50,7 +50,7 @@ class DataController extends Controller {
 	 */
 	public function actionView($id) {
 		return $this->render('view', [
-			'model' => $this->findModel($id),
+			'model' => $this->findModel($id)
 		]);
 	}
 
@@ -67,7 +67,7 @@ class DataController extends Controller {
 		}
 
 		return $this->render('create', [
-			'model' => $model,
+			'model' => $model
 		]);
 	}
 
@@ -86,7 +86,7 @@ class DataController extends Controller {
 		}
 
 		return $this->render('update', [
-			'model' => $model,
+			'model' => $model
 		]);
 	}
 

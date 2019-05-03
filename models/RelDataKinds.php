@@ -26,7 +26,7 @@ class RelDataKinds extends ActiveRecord {
 	public function rules() {
 		return [
 			[['data_id', 'kind_id'], 'required'],
-			[['data_id', 'kind_id'], 'integer'],
+			[['data_id', 'kind_id'], 'integer']
 		];
 	}
 
@@ -37,7 +37,7 @@ class RelDataKinds extends ActiveRecord {
 		return [
 			'id' => 'ID',
 			'data_id' => 'Data ID',
-			'kind_id' => 'Kind ID',
+			'kind_id' => 'Kind ID'
 		];
 	}
 }

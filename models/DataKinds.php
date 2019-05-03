@@ -28,7 +28,7 @@ class DataKinds extends ActiveRecord {
 		return [
 			[['name'], 'required'],
 			[['main', 'deleted'], 'integer'],
-			[['name'], 'string', 'max' => 255],
+			[['name'], 'string', 'max' => 255]
 		];
 	}
 
@@ -40,7 +40,7 @@ class DataKinds extends ActiveRecord {
 			'id' => 'ID',
 			'name' => 'Kind name',
 			'main' => 'Main kind flag',
-			'deleted' => 'Deleted item flag',
+			'deleted' => 'Deleted item flag'
 		];
 	}
 }

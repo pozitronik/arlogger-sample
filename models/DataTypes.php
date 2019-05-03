@@ -27,7 +27,7 @@ class DataTypes extends ActiveRecord {
 		return [
 			[['value'], 'required'],
 			[['deleted'], 'integer'],
-			[['value'], 'string', 'max' => 255],
+			[['value'], 'string', 'max' => 255]
 		];
 	}
 
@@ -38,7 +38,7 @@ class DataTypes extends ActiveRecord {
 		return [
 			'id' => 'ID',
 			'value' => 'Type value',
-			'deleted' => 'Deleted item flag',
+			'deleted' => 'Deleted item flag'
 		];
 	}
 }

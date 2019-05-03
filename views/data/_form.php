@@ -18,9 +18,9 @@ use yii\widgets\ActiveForm;
 
 	<?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
-	<?= $form->field($model, 'type_id')->dropDownList(ArrayHelper::map(DataTypes::find()->all(), 'id', 'value')); ?>
+	<?= $form->field($model, 'type_id')->dropDownList(ArrayHelper::map(DataTypes::find()->all(), 'id', 'value')) ?>
 
-	<?= $form->field($model, 'dataKinds')->checkboxList(ArrayHelper::map(DataKinds::find()->all(), 'id', 'name')); ?>
+	<?= $form->field($model, 'dataKinds')->checkboxList(ArrayHelper::map(DataKinds::find()->all(), 'id', 'name')) ?>
 
 	<div class="form-group">
 		<?= Html::submitButton($model->isNewRecord?'Save':'Update', ['class' => 'btn btn-success']) ?>

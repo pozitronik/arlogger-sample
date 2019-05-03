@@ -16,7 +16,7 @@ class DataKindsSearch extends DataKinds {
 	public function rules() {
 		return [
 			[['id', 'main', 'deleted'], 'integer'],
-			[['name'], 'safe'],
+			[['name'], 'safe']
 		];
 	}
 
@@ -41,7 +41,7 @@ class DataKindsSearch extends DataKinds {
 		// add conditions that should always apply here
 
 		$dataProvider = new ActiveDataProvider([
-			'query' => $query,
+			'query' => $query
 		]);
 
 		$this->load($params);
@@ -56,7 +56,7 @@ class DataKindsSearch extends DataKinds {
 		$query->andFilterWhere([
 			'id' => $this->id,
 			'main' => $this->main,
-			'deleted' => $this->deleted,
+			'deleted' => $this->deleted
 		]);
 
 		$query->andFilterWhere(['like', 'name', $this->name]);
