@@ -33,8 +33,10 @@ class Data extends \yii\db\ActiveRecord {
 		return [
 			[['name'], 'required'],
 			[['create_time'], 'safe'],
+			[['create_time'], 'default', 'value' => date('Y-m-d H:i:s')],
 			[['type_id', 'deleted'], 'integer'],
 			[['name'], 'string', 'max' => 255],
+			[['dataKinds'], 'safe']
 		];
 	}
 
@@ -44,10 +46,11 @@ class Data extends \yii\db\ActiveRecord {
 	public function attributeLabels() {
 		return [
 			'id' => 'ID',
-			'name' => 'Name of item',
-			'create_time' => 'Creation_time',
-			'type_id' => 'Type ID key',
-			'deleted' => 'Deleted item flag',
+			'name' => 'Name',
+			'create_time' => 'Creation time',
+			'type_id' => 'Item type',
+			'dataKinds' => 'Item kinds',
+			'deleted' => 'Deleted',
 		];
 	}
 
@@ -70,5 +73,12 @@ class Data extends \yii\db\ActiveRecord {
 	 */
 	public function getDataKinds() {
 		return $this->hasMany(DataKinds::class, ['id' => 'kind_id'])->via('relDataKinds');
+	}
+
+	/**
+	 * @param int[]|string $dataKinds
+	 */
+	public function setDataKinds($dataKinds):void {
+		//todo use relation helper
 	}
 }
