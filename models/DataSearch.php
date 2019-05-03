@@ -13,7 +13,7 @@ class DataSearch extends Data {
 	/**
 	 * {@inheritdoc}
 	 */
-	public function rules() {
+	public function rules():array {
 		return [
 			[['id', 'type_id', 'deleted'], 'integer'],
 			[['name', 'create_time'], 'safe']
@@ -23,7 +23,7 @@ class DataSearch extends Data {
 	/**
 	 * {@inheritdoc}
 	 */
-	public function scenarios() {
+	public function scenarios():array {
 		// bypass scenarios() implementation in the parent class
 		return Model::scenarios();
 	}
@@ -35,7 +35,7 @@ class DataSearch extends Data {
 	 *
 	 * @return ActiveDataProvider
 	 */
-	public function search($params) {
+	public function search($params):ActiveDataProvider {
 		$query = Data::find();
 
 		// add conditions that should always apply here

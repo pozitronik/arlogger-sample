@@ -13,7 +13,7 @@ class DataKindsSearch extends DataKinds {
 	/**
 	 * {@inheritdoc}
 	 */
-	public function rules() {
+	public function rules():array {
 		return [
 			[['id', 'main', 'deleted'], 'integer'],
 			[['name'], 'safe']
@@ -23,7 +23,7 @@ class DataKindsSearch extends DataKinds {
 	/**
 	 * {@inheritdoc}
 	 */
-	public function scenarios() {
+	public function scenarios():array {
 		// bypass scenarios() implementation in the parent class
 		return Model::scenarios();
 	}
@@ -35,7 +35,7 @@ class DataKindsSearch extends DataKinds {
 	 *
 	 * @return ActiveDataProvider
 	 */
-	public function search($params) {
+	public function search($params):ActiveDataProvider {
 		$query = DataKinds::find();
 
 		// add conditions that should always apply here

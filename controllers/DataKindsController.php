@@ -17,7 +17,7 @@ class DataKindsController extends Controller {
 	/**
 	 * {@inheritdoc}
 	 */
-	public function behaviors() {
+	public function behaviors():array {
 		return [
 			'verbs' => [
 				'class' => VerbFilter::class,
@@ -107,7 +107,7 @@ class DataKindsController extends Controller {
 	 * @return DataKinds the loaded model
 	 * @throws NotFoundHttpException if the model cannot be found
 	 */
-	protected function findModel($id) {
+	protected function findModel($id):DataKinds {
 		if (null !== ($model = DataKinds::findOne($id))) {
 			return $model;
 		}

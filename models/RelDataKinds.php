@@ -16,14 +16,14 @@ class RelDataKinds extends ActiveRecord {
 	/**
 	 * {@inheritdoc}
 	 */
-	public static function tableName() {
+	public static function tableName():string {
 		return 'rel_data_kinds';
 	}
 
 	/**
 	 * {@inheritdoc}
 	 */
-	public function rules() {
+	public function rules():array {
 		return [
 			[['data_id', 'kind_id'], 'required'],
 			[['data_id', 'kind_id'], 'integer']
@@ -33,7 +33,7 @@ class RelDataKinds extends ActiveRecord {
 	/**
 	 * {@inheritdoc}
 	 */
-	public function attributeLabels() {
+	public function attributeLabels():array {
 		return [
 			'id' => 'ID',
 			'data_id' => 'Data ID',

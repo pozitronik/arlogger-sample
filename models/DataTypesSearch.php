@@ -13,7 +13,7 @@ class DataTypesSearch extends DataTypes {
 	/**
 	 * {@inheritdoc}
 	 */
-	public function rules() {
+	public function rules():array {
 		return [
 			[['id', 'deleted'], 'integer'],
 			[['value'], 'safe']
@@ -23,7 +23,7 @@ class DataTypesSearch extends DataTypes {
 	/**
 	 * {@inheritdoc}
 	 */
-	public function scenarios() {
+	public function scenarios():array {
 		// bypass scenarios() implementation in the parent class
 		return Model::scenarios();
 	}
@@ -35,7 +35,7 @@ class DataTypesSearch extends DataTypes {
 	 *
 	 * @return ActiveDataProvider
 	 */
-	public function search($params) {
+	public function search($params):ActiveDataProvider {
 		$query = DataTypes::find();
 
 		// add conditions that should always apply here
