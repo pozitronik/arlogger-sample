@@ -6,9 +6,9 @@ use yii\grid\SerialColumn;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
-/* @var $this yii\web\View */
-/* @var $searchModel app\models\DataTypesSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
+/* @var yii\web\View $this */
+/* @var app\models\DataTypesSearch $searchModel */
+/* @var yii\data\ActiveDataProvider $dataProvider */
 
 $this->title = 'Item types';
 $this->params['breadcrumbs'][] = $this->title;

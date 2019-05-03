@@ -4,9 +4,9 @@ declare(strict_types = 1);
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-/* @var $this yii\web\View */
-/* @var $model app\models\DataTypesSearch */
-/* @var $form yii\widgets\ActiveForm */
+/* @var yii\web\View $this */
+/* @var app\models\DataTypesSearch $model */
+/* @var yii\widgets\ActiveForm $form */
 ?>
 
 <div class="data-types-search">

@@ -3,8 +3,8 @@ declare(strict_types = 1);
 
 use yii\helpers\Html;
 
-/* @var $this yii\web\View */
-/* @var $model app\models\DataKinds */
+/* @var yii\web\View $this */
+/* @var app\models\DataKinds $model */
 
 $this->title = 'Create item kind';
 $this->params['breadcrumbs'][] = ['label' => 'Kinds', 'url' => ['index']];

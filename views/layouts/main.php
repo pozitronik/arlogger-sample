@@ -1,9 +1,9 @@
 <?php
 declare(strict_types = 1);
 
-/* @var $this View */
+/* @var View $this */
 
-/* @var $content string */
+/* @var string $content */
 
 use app\widgets\Alert;
 use yii\helpers\Html;
