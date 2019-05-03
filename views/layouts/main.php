@@ -1,6 +1,7 @@
 <?php
+declare(strict_types = 1);
 
-/* @var $this \yii\web\View */
+/* @var $this View */
 
 /* @var $content string */
 
@@ -8,6 +9,7 @@ use app\widgets\Alert;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use yii\web\View;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 

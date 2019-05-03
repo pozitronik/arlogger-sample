@@ -1,8 +1,9 @@
 <?php
+declare(strict_types = 1);
 
 namespace app\models;
 
-use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "rel_data_kinds".
@@ -11,7 +12,7 @@ use Yii;
  * @property int $data_id
  * @property int $kind_id
  */
-class RelDataKinds extends \yii\db\ActiveRecord {
+class RelDataKinds extends ActiveRecord {
 	/**
 	 * {@inheritdoc}
 	 */

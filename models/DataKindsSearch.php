@@ -1,10 +1,10 @@
 <?php
+declare(strict_types = 1);
 
 namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\DataKinds;
 
 /**
  * DataKindsSearch represents the model behind the search form of `app\models\DataKinds`.

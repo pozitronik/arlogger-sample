@@ -1,8 +1,9 @@
 <?php
+declare(strict_types = 1);
 
 namespace app\models;
 
-use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "data_types".
@@ -11,7 +12,7 @@ use Yii;
  * @property string $value Type value
  * @property int $deleted Deleted item flag
  */
-class DataTypes extends \yii\db\ActiveRecord {
+class DataTypes extends ActiveRecord {
 	/**
 	 * {@inheritdoc}
 	 */

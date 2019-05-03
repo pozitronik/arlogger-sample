@@ -1,9 +1,10 @@
 <?php
+declare(strict_types = 1);
 
 namespace app\models;
 
-use Yii;
 use yii\db\ActiveQuery;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "data".
@@ -18,7 +19,7 @@ use yii\db\ActiveQuery;
  * @property RelDataKinds[]|ActiveQuery $relDataKinds Relation to binding table between DataKinds records
  * @property DataKinds[]|ActiveQuery $dataKinds Related DataKinds records
  */
-class Data extends \yii\db\ActiveRecord {
+class Data extends ActiveRecord {
 	/**
 	 * {@inheritdoc}
 	 */
