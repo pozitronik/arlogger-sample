@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\DataTypes */
 
-$this->title = 'Create Data Types';
-$this->params['breadcrumbs'][] = ['label' => 'Data Types', 'url' => ['index']];
+$this->title = 'Create item type';
+$this->params['breadcrumbs'][] = ['label' => 'Types', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="data-types-create">

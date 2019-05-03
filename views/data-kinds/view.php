@@ -31,8 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
 		'attributes' => [
 			'id',
 			'name',
-			'main',
-			'deleted',
+			'main:boolean',
+			'deleted:boolean',
 		],
 	]) ?>
 

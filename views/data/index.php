@@ -1,5 +1,7 @@
 <?php
 
+use yii\grid\ActionColumn;
+use yii\grid\SerialColumn;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -7,7 +9,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\DataSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Datas';
+$this->title = 'All items';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="data-index">
@@ -15,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	<h1><?= Html::encode($this->title) ?></h1>
 
 	<p>
-		<?= Html::a('Create Data', ['create'], ['class' => 'btn btn-success']) ?>
+		<?= Html::a('Create item', ['create'], ['class' => 'btn btn-success']) ?>
 	</p>
 
 	<?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -24,15 +26,23 @@ $this->params['breadcrumbs'][] = $this->title;
 		'dataProvider' => $dataProvider,
 		'filterModel' => $searchModel,
 		'columns' => [
-			['class' => 'yii\grid\SerialColumn'],
-
+			[
+				'class' => SerialColumn::class
+			],
 			'id',
 			'name',
 			'create_time',
-			'type_id',
-			'deleted',
+			[
+				'attribute' => 'type_id',
+				'value' => function(\app\models\Data $model) {
+					return $model->type_id??$model->dataType->value;
+				}
+			],
+			'deleted:boolean',
 
-			['class' => 'yii\grid\ActionColumn'],
+			[
+				'class' => ActionColumn::class
+			],
 		],
 	]); ?>
 

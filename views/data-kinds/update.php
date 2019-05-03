@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\DataKinds */
 
-$this->title = 'Update Data Kinds: '.$model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Data Kinds', 'url' => ['index']];
+$this->title = 'Update'.$model->name;
+$this->params['breadcrumbs'][] = ['label' => 'Kinds', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

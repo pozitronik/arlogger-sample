@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\DataKindsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Data Kinds';
+$this->title = 'Kinds';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="data-kinds-index">
@@ -28,8 +28,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
 			'id',
 			'name',
-			'main',
-			'deleted',
+			'main:boolean',
+			'deleted:boolean',
 
 			['class' => 'yii\grid\ActionColumn'],
 		],

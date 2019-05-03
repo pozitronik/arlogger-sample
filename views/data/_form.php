@@ -1,5 +1,8 @@
 <?php
 
+use app\models\DataKinds;
+use app\models\DataTypes;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -14,14 +17,12 @@ use yii\widgets\ActiveForm;
 
 	<?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
-	<?= $form->field($model, 'create_time')->textInput() ?>
+	<?= $form->field($model, 'type_id')->dropDownList(ArrayHelper::map(DataTypes::find()->all(), 'id', 'value')); ?>
 
-	<?= $form->field($model, 'type_id')->textInput() ?>
-
-	<?= $form->field($model, 'deleted')->textInput() ?>
+	<?= $form->field($model, 'dataKinds')->checkboxList(ArrayHelper::map(DataKinds::find()->all(), 'id', 'name')); ?>
 
 	<div class="form-group">
-		<?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+		<?= Html::submitButton($model->isNewRecord?'Save':'Update', ['class' => 'btn btn-success']) ?>
 	</div>
 
 	<?php ActiveForm::end(); ?>

@@ -14,7 +14,6 @@ use yii\widgets\ActiveForm;
 
 	<?= $form->field($model, 'value')->textInput(['maxlength' => true]) ?>
 
-	<?= $form->field($model, 'deleted')->textInput() ?>
 
 	<div class="form-group">
 		<?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

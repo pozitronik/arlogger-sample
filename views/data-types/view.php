@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		'attributes' => [
 			'id',
 			'value',
-			'deleted',
+			'deleted:boolean',
 		],
 	]) ?>
 
