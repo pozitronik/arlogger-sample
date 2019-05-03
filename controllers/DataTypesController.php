@@ -111,7 +111,7 @@ class DataTypesController extends Controller {
 	 * @throws NotFoundHttpException if the model cannot be found
 	 */
 	protected function findModel($id) {
-		if (($model = DataTypes::findOne($id)) !== null) {
+		if (null !== ($model = DataTypes::findOne($id))) {
 			return $model;
 		}
 

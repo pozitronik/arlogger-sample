@@ -111,7 +111,7 @@ class DataKindsController extends Controller {
 	 * @throws NotFoundHttpException if the model cannot be found
 	 */
 	protected function findModel($id) {
-		if (($model = DataKinds::findOne($id)) !== null) {
+		if (null !== ($model = DataKinds::findOne($id))) {
 			return $model;
 		}
 

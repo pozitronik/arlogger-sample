@@ -111,7 +111,7 @@ class DataController extends Controller {
 	 * @throws NotFoundHttpException if the model cannot be found
 	 */
 	protected function findModel($id) {
-		if (($model = Data::findOne($id)) !== null) {
+		if (null !== ($model = Data::findOne($id))) {
 			return $model;
 		}
 
