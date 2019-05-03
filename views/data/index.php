@@ -5,6 +5,7 @@ use yii\grid\ActionColumn;
 use yii\grid\SerialColumn;
 use yii\helpers\Html;
 use yii\grid\GridView;
+use app\models\Data;
 
 /* @var yii\web\View $this */
 /* @var app\models\DataSearch $searchModel */
@@ -35,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			'create_time',
 			[
 				'attribute' => 'type_id',
-				'value' => function(\app\models\Data $model) {
+				'value' => static function(Data $model) {
 					return $model->type_id??$model->dataType->value;
 				}
 			],
