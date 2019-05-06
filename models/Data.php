@@ -3,8 +3,8 @@ declare(strict_types = 1);
 
 namespace app\models;
 
+use pozitronik\arlogger\models\ActiveRecordHistory;
 use yii\db\ActiveQuery;
-use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "data".
@@ -19,7 +19,7 @@ use yii\db\ActiveRecord;
  * @property RelDataKinds[]|ActiveQuery $relDataKinds Relation to binding table between DataKinds records
  * @property DataKinds[]|ActiveQuery $dataKinds Related DataKinds records
  */
-class Data extends ActiveRecord {
+class Data extends ActiveRecordHistory {
 	/**
 	 * {@inheritdoc}
 	 */

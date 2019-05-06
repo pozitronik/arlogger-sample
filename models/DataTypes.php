@@ -3,7 +3,7 @@ declare(strict_types = 1);
 
 namespace app\models;
 
-use yii\db\ActiveRecord;
+use pozitronik\arlogger\models\ActiveRecordHistory;
 
 /**
  * This is the model class for table "data_types".
@@ -12,7 +12,7 @@ use yii\db\ActiveRecord;
  * @property string $value Type value
  * @property int $deleted Deleted item flag
  */
-class DataTypes extends ActiveRecord {
+class DataTypes extends ActiveRecordHistory {
 	/**
 	 * {@inheritdoc}
 	 */
