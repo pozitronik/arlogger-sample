@@ -42,7 +42,8 @@ AppAsset::register($this);
 			'items' => [
 				['label' => 'Data items', 'url' => ['/data/index']],
 				['label' => 'Item types', 'url' => ['/data-types/index']],
-				['label' => 'Item kinds', 'url' => ['/data-kinds/index']]
+				['label' => 'Item kinds', 'url' => ['/data-kinds/index']],
+				['label' => 'History', 'url' => ['/history']]
 			]
 		]) ?>
 		<?php NavBar::end(); ?>
